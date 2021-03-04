@@ -1,20 +1,10 @@
 import '../styles/globals.css';
-import Link from 'next/link';
+import Navbar from '../components/navbar';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div className=''>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-        <Link href='/login'>
-          <a>Login</a>
-        </Link>
-        <Link href='/register'>
-          <a>Register</a>
-        </Link>
-      </div>
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
