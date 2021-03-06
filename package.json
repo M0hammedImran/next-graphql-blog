@@ -1,11 +1,19 @@
 {
-  "name": "blog",
+  "name": "food_blog",
+  "homepage": "https://next-graphql-blog-m0hammedimran.vercel.app/",
+  "description": "Food Blog using NextJs and GraphQL",
   "version": "0.1.0",
   "author": {
     "name": "Mohammed Imran",
-    "email": "mohammedimran86992@gmail.com"
+    "email": "mohammedimran86992@gmail.com",
+    "url": "https://github.com/M0hammedImran"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "next-graphql-blog",
+    "url": "https://github.com/M0hammedImran/next-graphql-blog"
+  },
   "keywords": [
     "nextjs",
     "blog",
@@ -26,12 +34,14 @@
     "graphql": "^15.5.0",
     "knex": "^0.95.1",
     "micro-cors": "^0.1.1",
+    "mongoose": "^5.11.19",
     "next": "10.0.7",
     "pg": "^8.5.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.10.3",
     "@types/react": "^17.0.2",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.7",
