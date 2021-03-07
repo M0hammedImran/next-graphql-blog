@@ -7,3 +7,9 @@ npm run dev
 # or
 yarn dev
 ```
+
+## ENV
+
+```bash
+MONGO_URI=
+```
