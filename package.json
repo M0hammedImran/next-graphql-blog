@@ -29,18 +29,18 @@
   "dependencies": {
     "apollo-server-micro": "^2.21.0",
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "dataloader": "^2.0.0",
     "date-fns": "^2.18.0",
     "graphql": "^15.5.0",
-    "knex": "^0.95.1",
     "micro-cors": "^0.1.1",
     "mongoose": "^5.11.19",
     "next": "10.0.7",
-    "pg": "^8.5.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/mongoose": "^5.10.3",
     "@types/react": "^17.0.2",
     "autoprefixer": "^10.2.5",

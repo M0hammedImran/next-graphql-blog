@@ -1,5 +1,5 @@
 import { model, Document, Schema, models } from 'mongoose';
-import { user } from '@/types/User';
+import { user } from '@/intefaces/User';
 
 const MODEL_NAME = 'user';
 const UserSchema = new Schema<Document<user>>(
