@@ -1,7 +1,7 @@
-import { join } from 'path'
-import { mutationType, makeSchema, objectType, queryType } from 'nexus'
-import { nexusPrisma } from 'nexus-plugin-prisma'
 import bcrypt from 'bcryptjs'
+import { join } from 'path'
+import { makeSchema, mutationType, objectType, queryType } from 'nexus'
+import { nexusPrisma } from 'nexus-plugin-prisma'
 
 const User = objectType({
     name: 'User',
@@ -21,21 +21,20 @@ const Query = queryType({
     },
 })
 
-// TODO: Resume 👇🏽
+// TODO: Create the Crud Functions and login and register routes
+
 const Mutation = mutationType({
     definition(t) {
         t.crud.createOneUser({
             resolve: async (_root, args, ctx) => {
                 const hash = await bcrypt.hash(args.data.password, 10)
 
-                const res = await ctx.prisma.user.create({
+                return ctx.prisma.user.create({
                     data: {
                         ...args.data,
                         password: hash,
                     },
                 })
-
-                return res
             },
         })
 
