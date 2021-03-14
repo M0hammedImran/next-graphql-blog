@@ -1,15 +1,13 @@
 import { ApolloServer } from 'apollo-server-micro';
-import { DbConnection } from '@/middleware/DbConnection';
 import { schema } from '@/graphql/schema';
+import { createContext } from '@/graphql/context';
 
-DbConnection();
-
-const apolloServer = new ApolloServer(schema);
+const apolloServer = new ApolloServer({ schema, context: createContext });
 
 export const config = {
-  api: {
-    bodyParser: false,
-  },
+    api: {
+        bodyParser: false,
+    },
 };
 
 const handler = apolloServer.createHandler({ path: '/api/graphql' });

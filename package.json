@@ -1,51 +1,62 @@
 {
-  "name": "food_blog",
-  "homepage": "https://next-graphql-blog-m0hammedimran.vercel.app/",
-  "description": "Food Blog using NextJs and GraphQL",
-  "version": "0.1.0",
-  "author": {
-    "name": "Mohammed Imran",
-    "email": "mohammedimran86992@gmail.com",
-    "url": "https://github.com/M0hammedImran"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "directory": "next-graphql-blog",
-    "url": "https://github.com/M0hammedImran/next-graphql-blog"
-  },
-  "keywords": [
-    "nextjs",
-    "blog",
-    "react",
-    "typescript"
-  ],
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "apollo-server-micro": "^2.21.0",
-    "axios": "^0.21.1",
-    "bcryptjs": "^2.4.3",
-    "dataloader": "^2.0.0",
-    "date-fns": "^2.18.0",
-    "graphql": "^15.5.0",
-    "micro-cors": "^0.1.1",
-    "mongoose": "^5.11.19",
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  },
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.2",
-    "@types/mongoose": "^5.10.3",
-    "@types/react": "^17.0.2",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.7",
-    "tailwindcss": "^2.0.3",
-    "typescript": "^4.2.2"
-  }
+    "name": "food_blog",
+    "homepage": "https://next-graphql-blog-m0hammedimran.vercel.app/",
+    "description": "Food Blog using NextJs and GraphQL",
+    "version": "0.1.0",
+    "author": {
+        "name": "Mohammed Imran",
+        "email": "mohammedimran86992@gmail.com",
+        "url": "https://github.com/M0hammedImran"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "directory": "next-graphql-blog",
+        "url": "https://github.com/M0hammedImran/next-graphql-blog"
+    },
+    "keywords": [
+        "nextjs",
+        "blog",
+        "react",
+        "typescript"
+    ],
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prisma:migrate": "prisma migrate dev --preview-feature",
+        "format": "prettier --write '**/*.@(js|ts|tsx|json|md|yml)'"
+    },
+    "dependencies": {
+        "@nexus/schema": "^0.20.1",
+        "@prisma/client": "^2.18.0",
+        "@tailwindcss/typography": "^0.4.0",
+        "apollo-server-micro": "^2.21.0",
+        "axios": "^0.21.1",
+        "bcryptjs": "^2.4.3",
+        "dataloader": "^2.0.0",
+        "date-fns": "^2.18.0",
+        "graphql": "^15.5.0",
+        "micro-cors": "^0.1.1",
+        "next": "10.0.7",
+        "nexus": "^1.0.0",
+        "nexus-plugin-prisma": "^0.32.0",
+        "react": "17.0.1",
+        "react-dom": "17.0.1"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.2",
+        "@types/mongoose": "^5.10.3",
+        "@types/react": "^17.0.2",
+        "autoprefixer": "^10.2.5",
+        "postcss": "^8.2.7",
+        "prettier": "^2.2.1",
+        "prisma": "^2.18.0",
+        "tailwindcss": "^2.0.3",
+        "typescript": "^4.2.2"
+    },
+    "engines": {
+        "node": ">=12.10.0"
+    }
 }

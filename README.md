@@ -11,5 +11,5 @@ yarn dev
 ## ENV
 
 ```bash
-MONGO_URI=
+DATABASE_URL=
 ```
