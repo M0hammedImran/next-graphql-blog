@@ -8,11 +8,11 @@ datasource db {
 }
 
 model User {
-  id              Int      @id @default(autoincrement())
+  id              String   @id @default(uuid())
   firstName       String?  @db.VarChar(25)
   lastName        String?  @db.VarChar(25)
-  email           String   @db.VarChar(50)
-  password        String   @db.VarChar(50)
+  email           String   @unique
+  password        String   @db.VarChar(100)
   phone           String?
   state           String?
   city            String?
@@ -23,22 +23,15 @@ model User {
   isDeleted       Boolean?
   isEmailVerified Boolean?
   Post            Post[]
-  Profile         Profile?
+  bio             String?
 }
 
 model Post {
-  id           Int     @id @default(autoincrement())
+  id           String  @id @default(uuid())
   title        String? @db.VarChar(50)
   sectionOne   String? @db.VarChar(256)
   sectionTwo   String? @db.VarChar(256)
   sectionThree String? @db.VarChar(256)
+  authorId     String?
   author       User?   @relation(fields: [authorId], references: [id])
-  authorId     Int?
-}
-
-model Profile {
-  id     Int     @id @default(autoincrement())
-  bio    String?
-  User   User    @relation(fields: [userId], references: [id])
-  userId Int     @unique
 }

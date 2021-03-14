@@ -1,40 +1,38 @@
 -- CreateTable
 CREATE TABLE "User" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "firstName" VARCHAR(25),
     "lastName" VARCHAR(25),
-    "email" VARCHAR(50) NOT NULL,
+    "email" TEXT NOT NULL,
     "password" VARCHAR(50) NOT NULL,
+    "phone" TEXT,
+    "state" TEXT,
+    "city" TEXT,
+    "landmark" TEXT,
+    "country" TEXT,
+    "address1" TEXT,
+    "address2" TEXT,
+    "isDeleted" BOOLEAN,
+    "isEmailVerified" BOOLEAN,
+    "bio" TEXT,
 
     PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Post" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "title" VARCHAR(50),
     "sectionOne" VARCHAR(256),
     "sectionTwo" VARCHAR(256),
     "sectionThree" VARCHAR(256),
-    "authorId" INTEGER,
-
-    PRIMARY KEY ("id")
-);
-
--- CreateTable
-CREATE TABLE "Profile" (
-    "id" SERIAL NOT NULL,
-    "bio" TEXT,
-    "userId" INTEGER NOT NULL,
+    "authorId" TEXT,
 
     PRIMARY KEY ("id")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Profile.userId_unique" ON "Profile"("userId");
+CREATE UNIQUE INDEX "User.email_unique" ON "User"("email");
 
 -- AddForeignKey
 ALTER TABLE "Post" ADD FOREIGN KEY ("authorId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "Profile" ADD FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
