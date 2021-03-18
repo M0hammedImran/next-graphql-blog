@@ -38,7 +38,6 @@
         "axios": "^0.21.1",
         "bcryptjs": "^2.4.3",
         "dataloader": "^2.0.0",
-        "date-fns": "^2.18.0",
         "dayjs": "^1.10.4",
         "graphql": "^15.5.0",
         "micro-cors": "^0.1.1",
